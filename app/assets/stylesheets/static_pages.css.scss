@@ -1,0 +1,35 @@
+body {
+	background:black;
+}
+.welcome_page {
+	background-image:url('usher.jpg');
+	background-size:100%;
+	background-repeat:no-repeat;
+	background-overflow:hidden;
+	height:700px;
+}
+
+
+/* typography */
+
+.main_title {
+	text-align:center;
+	position: relative;
+	top:100px;
+	margin:0px;
+	padding:0px;
+	color:#ccc;
+}
+.main_subtitle {
+	text-align:center;
+	position:relative;
+	margin:0px;
+	padding-right:30%;
+	color:#ccc;
+	top: 110px;
+	font-weight:normal;
+	font-size:2.2em;
+	font-family:'Inika';
+
+
+}

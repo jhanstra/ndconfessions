@@ -1,4 +1,12 @@
 Ndconfessions::Application.routes.draw do
+
+  get "users/new"
+
+  match '/about', to: 'static_pages#about'
+  match '/home', to: 'home_page#home'
+
+  root to: 'static_pages#welcome'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

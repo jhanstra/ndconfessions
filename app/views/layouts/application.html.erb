@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ndconfessions</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>ND Confessions</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Nixie+One|Dosis:400,600|Headland+One|Fredericka+the+Great|Poiret+One|Syncopate|Quicksand|Vast+Shadow|Wire+One|Roboto+Condensed:400,300|Inika|Titillium+Web:400,200,700|Radley|Julius+Sans+One|Righteous' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
-
 <%= yield %>
 
 </body>
