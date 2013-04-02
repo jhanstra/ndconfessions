@@ -1,2 +1,34 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div id="welcome_body">
+      <div class="welcome_page" >
+            <div id="links">
+            <%= link_to "Sign in", home_path, class: "top_links" %>
+            </div>
+      <h1 class="main_title">Notre Dame Confessions</h1>
+<!--       <h2 class="main_subtitle">Fess up, ND.</h2>
+ -->      <h2 class="main_subtitle">Say stuff, anonymously.</h2>
+            <div class="form_container">
+            <h2 class="main_subtitle sign_up_subtitle">Sign up:</h2>
+                  <div class="signup_form">
+                  <%= form_for(@user) do |f| %>
+
+                        <%= f.label :name, "Name:" %>
+                        <%= f.text_field :name %>
+
+                        <%= f.label :email, "Email:" %>
+                        <%= f.text_field :email %>
+
+                        <%= f.label :password, "Password (must be 6 characters long):" %>
+                        <%= f.password_field :password %>
+
+                        <%= f.label :password_confirmation, "Confirmation:" %>
+                        <%= f.password_field :password_confirmation %>
+                       
+                        <%= f.submit "Create an account", class: "btn btn-large btn-primary" %>
+                      
+                  <% end %>
+                  <%= render 'shared/error_messages' %>
+                  </div>
+            </div>
+      </div>
+</div>
+

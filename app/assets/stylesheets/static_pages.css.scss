@@ -1,12 +1,15 @@
-body {
+#welcome_body {
 	background:black;
+	overflow:auto;
+
 }
 .welcome_page {
 	background-image:url('usher.jpg');
 	background-size:100%;
 	background-repeat:no-repeat;
 	background-overflow:hidden;
-	height:700px;
+	height:710px;
+
 }
 
 
@@ -16,7 +19,7 @@ body {
 	text-align:center;
 	position: relative;
 	top:100px;
-	margin:0px;
+	margin:0 0 0 2%;
 	padding:0px;
 	color:#ccc;
 }
@@ -24,12 +27,15 @@ body {
 	text-align:center;
 	position:relative;
 	margin:0px;
-	padding-right:30%;
-	color:#ccc;
+	padding-right:0%;
+	color:#bbb;
 	top: 110px;
 	font-weight:normal;
-	font-size:2.2em;
-	font-family:'Inika';
+	font-size:1.7em;
+	letter-spacing:-1px;
+	text-shadow: 0px 0px 5px #000;
 
-
+}
+.sign_up_subtitle {
+	top:0px;
 }

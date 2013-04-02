@@ -1,9 +1,10 @@
 Ndconfessions::Application.routes.draw do
 
-  get "users/new"
+  resources :users
 
   match '/about', to: 'static_pages#about'
   match '/home', to: 'home_page#home'
+  match '/', to: 'users#new'
 
   root to: 'static_pages#welcome'
 

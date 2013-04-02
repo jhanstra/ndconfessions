@@ -8,10 +8,10 @@ section {
 	overflow: hidden;
 }
 body {
-
+background-image:url('light_toast.png');
 }
 .container {
-	background-image:url('light_toast.png');
+	
 	height:5500px;
 	width:100%;
 	position:relative;
@@ -55,6 +55,53 @@ body {
 		color:#ffb700;
 		text-decoration:none;
 	}
+}
+.sidebar_container {
+	margin-top:30px;
+}
+.sidebar_list {
+	text-align:center;
+}
+
+/* forms */
+
+
+.form_container {
+	position:relative;
+	width:35%;
+	margin: auto;
+	top:150px;
+	background:#000;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius:5px;
+	padding:10px 0px 10px 23px;
+
+}
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 90%;
+  margin: 0 auto 15px;
+  padding: 10px;
+}
+
+input {
+  height: auto !important;
+}
+label {
+	color:#ccc;
+	font-size:1.1em;
+}
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }
 
 
@@ -100,6 +147,57 @@ header h2 {
 #troll {
 	font-size:.9em;
 }
+.user_header {
+	text-align:center;
+	font-size:2em;
+	color:#333;
+	text-shadow:none;
+	margin-top:0;
+	padding-top:0;
+
+}
+#sidebar_header {
+	text-align:center;
+	font-size:1.5em;
+	color:#333;
+}
+
+
+
+
+
+
+/* miscellaneous */
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
