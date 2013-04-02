@@ -1,9 +1,26 @@
 <header class="jumbotron subhead" id="overview">
 	<div class="top">
 		<div id="links">
-			<%= link_to "Jared", '#', class: "top_links" %>
-			<%= link_to "About", about_path, class: "top_links" %>
-			<%= link_to "Home", home_path, class: "top_links" %>
+			<% if signed_in? %>
+         <!--  <li id="fat-menu" class="dropdown"> -->
+             <a href="#" class="dropdown-toggle top_links"  data-toggle="dropdown">
+                <%= current_user.name %><i class="icon-chevron-right"></i></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", '#' %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+              </ul>
+            
+          	<% else %>
+            <%= link_to "Sign in", signin_path, class: "top_links" %>
+          <% end %>
+      
+          <%= link_to "About", about_path, class: "top_links" %>
+		  <%= link_to "Home", home_path, class: "top_links" %>
+		  <%= link_to "Sign out", signout_path, method: "delete", class: "top_links" %>
+          
+          
 		<h1>ND Confessions</h1>
 		<h2 class="lead">Go ahead, let it out.</h2>
 		<%= link_to "+ Submit a Confession", '#', class: "btn btn-large btn-primary submit_button" %>

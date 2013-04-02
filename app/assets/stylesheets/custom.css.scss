@@ -74,7 +74,7 @@ background-image:url('light_toast.png');
 	background:#000;
 	background-color: rgba(0, 0, 0, 0.6);
 	border-radius:5px;
-	padding:10px 0px 10px 23px;
+	padding:15px 0px 10px 25px;
 
 }
 input, textarea, select, .uneditable-input {
@@ -90,6 +90,9 @@ input {
 label {
 	color:#ccc;
 	font-size:1.1em;
+}
+.signup_form p {
+	color:#ccc;
 }
 #error_explanation {
   color: #f00;
