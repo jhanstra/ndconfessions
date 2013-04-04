@@ -19,7 +19,12 @@ class ConfessionsController < ApplicationController
 	end
 
 	def index
+		# if current_user.signed_in? == false
+		# 	redirect_to root_path
+		# else
 		@confessions = Confession.paginate(:page => params[:page])
+		#try checking for user logged in here
+		
 	end
 
 	def index_by_popular_day

@@ -1,6 +1,8 @@
 <%= render 'layouts/header' %>
 <div class="content_container">
 <h2>Submit a confession</h2>
+<br>
+<p class="text">Go ahead, let it out.  Tell ND Confessions about something you did, something that happened to you, or something you witnessed at Notre Dame.  Be sure not to give any names or sensitive information that would jeopardize any person or department.  We want this to be a safe and respectful place.  Your confession will be completely anonymous, with no connection to your profile.  Note: This confession WILL be on the site and viewable by everyone.  Please make ND Confessions the best it can be by posting high-quality and relevant confessions.</p>
   <%= form_for(:confession, url:post_path) do |f| %>
 
         <%= f.label :content, "Write your confession here:" %>
