@@ -127,17 +127,26 @@ label {
 /* typography */
 
 @font-face {
-  font-family: 'Headland One';
-  src:font-url('HeadlandOne-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
+    font-family: headland;
+    src: url("/assets/headland.ttf") format("truetype"); /* For IE */
+ 	src: local("headland"), url("/assets/headland.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Nixie One';
-  src:font-url('NixieOne-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
+    font-family: nixie-one;
+    src: url("/assets/nixie-one.ttf") format("truetype"); /* For IE */
+ 	src: local("nixie-one"), url("/assets/nixie-one.ttf") format("truetype");
 }
+@font-face {
+    font-family: syncopate;
+    src: url("/assets/syncopate.ttf") format("truetype"); /* For IE */
+ 	src: local("syncopate"), url("/assets/syncopate.ttf") format("truetype");
+}
+@font-face {
+    font-family: vast-shadow;
+    src: url("/assets/vast-shadow.ttf") format("truetype"); /* For IE */
+ 	src: local("vast-shadow"), url("/assets/vast-shadow.ttf") format("truetype");
+}
+
 
 
 
@@ -174,14 +183,14 @@ header h2 {
 .text {
 	font-size:1.2em;
 	color:#666;
-	font-family: 'Headland One';
+	font-family: headland;
 	line-height:160%;
 }
 .content_container h2 {
 	margin:10px 0 0 0;
 	font-size:2.5em;
 	color:#333;
-	font-family: 'Nixie One'
+	font-family: nixie-one;
 }
 .header2 {
 	margin:10px 0 0 0;
@@ -212,7 +221,7 @@ header h2 {
 	color:#888;
 	margin:5px 0 0 20px;
 	padding:0;
-	font-family:'Headland One';
+	font-family:headland;
 }
 
 .votes {
@@ -222,7 +231,7 @@ header h2 {
 	float:right;
 	margin-top:10px;
 	margin-right:20px;
-	font-family:'Nixie One'
+	font-family: nixie-one;
 }
 
 .icons {
