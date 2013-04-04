@@ -2,15 +2,35 @@ Ndconfessions::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :confessions do
+    member do
+       post :vote_up
+       post :vote_down
+    end
+  end
+
 
   match '/about', to: 'static_pages#about'
-  match '/home', to: 'home_page#home'
+  match '/home', to: 'confessions#index'
+
  
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
+  match '/submit', to: 'confessions#new'
+  match '/post', to: 'confessions#create'
+
+  match '/confessions/:id/vote_up', to:'confessions#index'
+  match '/confessions/:id/vote_down', to:'confessions#index'
+
+  match '/popular_today', to: 'confessions#index_by_popular_today'
+
+
   root to: 'users#new'
+
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,11 @@
+<%= render 'layouts/header' %>
+<div class="content_container">
+<h2>Submit a confession</h2>
+  <%= form_for(:confession, url:post_path) do |f| %>
+
+        <%= f.label :content, "Write your confession here:" %>
+        <%= f.text_area :content, class: "confession_content"%>
+       
+        <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+  <% end %>
+</div>

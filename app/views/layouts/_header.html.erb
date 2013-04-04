@@ -3,8 +3,9 @@
 		<div id="links">
 			<% if signed_in? %>
          <!--  <li id="fat-menu" class="dropdown"> -->
-             <a href="#" class="dropdown-toggle top_links"  data-toggle="dropdown">
-                <%= current_user.name %><i class="icon-chevron-right"></i></a>
+             <!-- <a href="#" class="dropdown-toggle top_links"  data-toggle="dropdown">
+                <%= current_user.name %><!-- i class="icon-chevron-right"></i> -->
+      <%= link_to "Sign out", signout_path, method: "delete", class: "top_links" %>
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", '#' %></li>
@@ -18,12 +19,12 @@
       
           <%= link_to "About", about_path, class: "top_links" %>
 		  <%= link_to "Home", home_path, class: "top_links" %>
-		  <%= link_to "Sign out", signout_path, method: "delete", class: "top_links" %>
-          
+<!-- 		  <%= link_to "Sign out", signout_path, method: "delete", class: "top_links" %>
+ -->          
           
 		<h1>ND Confessions</h1>
-		<h2 class="lead">Go ahead, let it out.</h2>
-		<%= link_to "+ Submit a Confession", '#', class: "btn btn-large btn-primary submit_button" %>
+		<h2 class="lead">Confess anything, anonymously.</h2>
+		<%= link_to "+ Submit a Confession", submit_path, class: "btn btn-large btn-primary submit_button" %>
 	</div>
 </header>
 

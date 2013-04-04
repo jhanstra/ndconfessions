@@ -8,11 +8,9 @@ section {
 	overflow: hidden;
 }
 body {
-background-image:url('light_toast.png');
+	background-image:url('light_toast.png');
 }
 .container {
-	
-	height:5500px;
 	width:100%;
 	position:relative;
 	top:-10px;
@@ -37,14 +35,7 @@ background-image:url('light_toast.png');
 	left:12%;
 	top:10px;
 }
-.sidebarz {
-	float:left;
-	
-}
-.contentz {
 
-	float:left;
-}
 .top_links {
 	position:relative;
 	float:right;
@@ -60,7 +51,12 @@ background-image:url('light_toast.png');
 	margin-top:30px;
 }
 .sidebar_list {
-	text-align:center;
+	text-align:left;
+	margin-left:10%;
+}
+.content_container {
+	width:52%;
+	margin: 30px 24% 0px;
 }
 
 /* forms */
@@ -94,6 +90,8 @@ label {
 .signup_form p {
 	color:#ccc;
 }
+
+
 #error_explanation {
   color: #f00;
   ul {
@@ -106,6 +104,21 @@ label {
   @extend .control-group;
   @extend .error;
 }
+.header_container {
+	display:inline;
+	width:10%;
+	height:40px;
+	float:left;
+}
+.stats_container {
+	display:inline;
+	width:50%;
+	height:40px;
+	float:right;
+	padding-top:5px;
+}
+
+
 
 
 
@@ -121,9 +134,10 @@ h1 {
 	font-size:5em;
 	color:#ccc;
 	text-shadow: 0px 5px 10px #000;
+
 }
 header h2 {
-	padding-left:39%;
+	padding-left:35%;
 	position:relative;
 	top:42px;
 	font-size:3em;
@@ -134,18 +148,23 @@ header h2 {
 	font-weight:normal;
 
 }
-.contentz p {
+.text {
 	font-size:1.2em;
 	color:#666;
 	font-family: 'Headland One';
 	line-height:160%;
-	padding-right:10%
 }
-.contentz h2 {
-	padding-top:20px;
+.content_container h2 {
+	margin:10px 0 0 0;
 	font-size:2.5em;
-	color:#999;
-	font-family: 'Nixie One';
+	color:#333;
+	font-family: 'Syncopate';
+}
+.header2 {
+	margin:10px 0 0 0;
+	font-size:2.5em;
+	color:#333;
+	font-family: 'Syncopate';
 }
 #troll {
 	font-size:.9em;
@@ -160,9 +179,41 @@ header h2 {
 
 }
 #sidebar_header {
-	text-align:center;
+	text-align:left;
 	font-size:1.5em;
 	color:#333;
+	margin-left:20%;
+}
+.content_container h4 {
+	font-size:.85em;
+	color:#888;
+	margin:5px 0 0 20px;
+	padding:0;
+	font-family:'Headland One';
+}
+
+.votes {
+	font-size:2.2em;
+	color:#666;
+	display:inline;
+	float:right;
+	margin-top:10px;
+	margin-right:20px;
+	font-family:'Nixie One'
+}
+
+.icons {
+	display:inline;
+	opacity:0.2;
+	float:right;
+	margin-top:6px;
+
+}
+.icons:hover {
+	opacity:0.4;
+}
+.confession_span {
+	float:right;
 }
 
 
@@ -185,7 +236,9 @@ header h2 {
 	margin-top: 45px;
 	@include box_sizing;
 }
-
+.paginate {
+	margin:auto;
+}
 
 
 
