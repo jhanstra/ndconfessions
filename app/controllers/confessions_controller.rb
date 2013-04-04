@@ -22,33 +22,37 @@ class ConfessionsController < ApplicationController
 		@confessions = Confession.paginate(:page => params[:page])
 	end
 
-	# def index_by_popular_day
-	# 	@confessions = Confession.paginate(:page => params[:page])
-	# end
+	def index_by_popular_day
+		@confessions = Confession.paginate(:page => params[:page])
+	end
 
-	# def index_by_popular_week
-	# 	@confessions = Confession.paginate(:page => params[:page])
-	# end
+	def index_by_popular_week
+		@confessions = Confession.paginate(:page => params[:page])
+	end
 
-	# def index_by_popular_all_time
-	# 	@confessions = Confession.paginate(:page => params[:page])
-	# end
+	def index_by_popular_all_time
+		@confessions = Confession.paginate(:page => params[:page])
+	end
 
 	def vote_up
-	    begin
+	    
 	      current_user.vote_for(@confession = Confession.find(params[:id]))
-	      render :nothing => true, :status => 200
+	      # render :nothing => true, :status => 200
+	      redirect_to :back
 		  rescue ActiveRecord::RecordInvalid
-		  render :nothing => true, :status => 404
-		end
+		  # render :nothing => true, :status => 404
+		  redirect_to :back
+		
 	end
 
 	def vote_down
 	    begin
 	      current_user.vote_against(@confession = Confession.find(params[:id]))
-	      render :nothing => true, :status => 200
+	      # render :nothing => true, :status => 200
+	      redirect_to :back
 		  rescue ActiveRecord::RecordInvalid
-		  render :nothing => true, :status => 404
+		  # render :nothing => true, :status => 404
+		  redirect_to :back
 		end
 	end
 

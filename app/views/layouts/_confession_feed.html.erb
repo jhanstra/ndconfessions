@@ -10,7 +10,7 @@
 					</div>
 					<div class="stats_container">
 					<%= if current_user.voted_for?(confession) 
-						link_to image_tag('upvote2.png'), vote_up_confession_path(confession), :method => :post, class: "icons first_icon" 
+						link_to image_tag('upvote2.png'), vote_up_confession_path(confession), :method => :post, class: "icons icon_clicked" 
 						else
 						link_to image_tag('upvote2.png'), vote_up_confession_path(confession), :method => :post, class: "icons" 
 						end %>
@@ -20,7 +20,11 @@
 						<%= sign %><%= total_votes %> 
 					</p>
 					<br><br>
-					<%= link_to image_tag('downvote2.png'), vote_down_confession_path(confession), :method => :post, class: "icons second_icon" %>
+					<%= if current_user.voted_against?(confession) 
+						link_to image_tag('downvote2.png'), vote_down_confession_path(confession), :method => :post, class: "icons icon_clicked" 
+						else
+						link_to image_tag('downvote2.png'), vote_down_confession_path(confession), :method => :post, class: "icons" 
+						end %>
 					</div>
 					<br>
 					<br><br>

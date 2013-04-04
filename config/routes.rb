@@ -21,8 +21,8 @@ Ndconfessions::Application.routes.draw do
   match '/submit', to: 'confessions#new'
   match '/post', to: 'confessions#create'
 
-  match '/confessions/:id/vote_up', to:'confessions#index'
-  match '/confessions/:id/vote_down', to:'confessions#index'
+  match '/confessions#vote_up', to:'confessions#index'
+  match '/confessions#vote_down', to:'confessions#index'
 
   match '/popular_today', to: 'confessions#index_by_popular_today'
 
