@@ -6,7 +6,7 @@
 				<% @confessions.each do |confession| %>
 <!-- 					<span id="confession_span">
  -->					<div class="header_container">
-					<h2 class="header2"># <%= confession.id %></h2>
+					<h2 class="header2">#<%= confession.id %></h2>
 					</div>
 					<div class="stats_container">
 					<%= if current_user.voted_for?(confession) 
@@ -17,7 +17,7 @@
 					<p class="votes">
 						<% total_votes = confession.votes_for - confession.votes_against %>
 						<% total_votes >= 0 ? sign = "+" : sign = "" %>
-						<%= sign %> <%= total_votes %> 
+						<%= sign %><%= total_votes %> 
 					</p>
 					<br><br>
 					<%= if current_user.voted_against?(confession) 
