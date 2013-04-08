@@ -178,7 +178,6 @@ header h2 {
 	letter-spacing: -1px;
 	margin-bottom: 30px;
 	font-weight:normal;
-
 }
 .text {
 	font-size:1.2em;
@@ -224,6 +223,7 @@ header h2 {
 	font-family:headland;
 }
 
+
 .votes {
 	font-size:2.2em;
 	color:#666;
@@ -250,7 +250,14 @@ header h2 {
 .confession_span {
 	float:right;
 }
-
+.number_link {
+	text-decoration:none;
+	color:#333;
+}
+.number_link:hover {
+	color:#999;
+	text-decoration:none;
+}
 
 
 

@@ -11,8 +11,8 @@
                   <div class="signup_form">
                   <%= form_for(:session, url: sessions_path) do |f| %>
 
-                        <%= f.label :email, "Email:" %>
-                        <%= f.text_field :email %>
+                        <%= f.label :username, "Username:" %>
+                        <%= f.text_field :username %>
 
                         <%= f.label :password, "Password (must be 6 characters long):" %>
                         <%= f.password_field :password %>

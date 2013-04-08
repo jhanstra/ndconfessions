@@ -21,13 +21,14 @@ Ndconfessions::Application.routes.draw do
   match '/submit', to: 'confessions#new'
   match '/post', to: 'confessions#create'
 
-  match '/confessions#vote_up', to:'confessions#index'
-  match '/confessions#vote_down', to:'confessions#index'
 
   match '/popular_today', to: 'confessions#index_by_popular_today'
 
-
-  root to: 'users#new'
+  # if current_user.signed_in?
+  #   root to: 'confessions#index'
+  # else
+    root to: 'users#new'
+  
 
 
   
