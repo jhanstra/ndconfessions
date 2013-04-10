@@ -11,6 +11,7 @@ class ConfessionsController < ApplicationController
 	    else
 	      render 'new'
 	    end
+	    @confession.total_votes = 0
 	end
 
 
@@ -42,11 +43,11 @@ class ConfessionsController < ApplicationController
 	def vote_up
 	    
 	      current_user.vote_for(@confession = Confession.find(params[:id]))
-	      # render :nothing => true, :status => 200
-	      redirect_to :back
+	      render :nothing => true, :status => 200
+	      # redirect_to :back
 		  rescue ActiveRecord::RecordInvalid
-		  # render :nothing => true, :status => 404
-		  redirect_to :back
+		  render :nothing => true, :status => 404
+		  # redirect_to :back
 		
 	end
 

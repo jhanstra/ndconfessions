@@ -1,5 +1,7 @@
 Ndconfessions::Application.routes.draw do
 
+  get "popular_confessions/index"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :confessions do
@@ -12,6 +14,7 @@ Ndconfessions::Application.routes.draw do
 
   match '/about', to: 'static_pages#about'
   match '/home', to: 'confessions#index'
+  match '/creators', to: 'static_pages#creators'
 
  
   match '/signup', to: 'users#new'
@@ -20,6 +23,7 @@ Ndconfessions::Application.routes.draw do
 
   match '/submit', to: 'confessions#new'
   match '/post', to: 'confessions#create'
+
 
 
   match '/popular_today', to: 'confessions#index_by_popular_today'

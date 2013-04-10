@@ -10,24 +10,21 @@
                   <div class="signup_form">
                   <%= form_for(@user) do |f| %>
 
-                        <%= f.label :username, "Username:" %>
-                        <%= f.text_field :username %>
                         
-                        <%= f.label :name, "Full Name (optional):" %>
-                        <%= f.text_field :name %>
+                        <%= f.text_field :username, placeholder:"Choose a Username" %>
+                        
+                        <%= f.text_field :name, placeholder:"Full Name (optional)" %>
 
-                        <%= f.label :email, "Email (optional):" %>
-                        <%= f.text_field :email %>
+                        <%= f.text_field :email, placeholder:"Email (optional)" %>
 
-                        <%= f.label :password, "Password (must be 6 characters long):" %>
-                        <%= f.password_field :password %>
+                        <%= f.password_field :password, placeholder:"Password (must be 6 characters long)" %>
 
-                        <%= f.label :password_confirmation, "Confirmation:" %>
-                        <%= f.password_field :password_confirmation %>
+                        <%= f.password_field :password_confirmation, placeholder:"Confirm Password" %>
                        
                         <%= f.submit "Create an account", class: "btn btn-large btn-primary" %>
                       
                   <% end %>
+
                   <%= render 'shared/error_messages' %>
                   </div>
             </div>

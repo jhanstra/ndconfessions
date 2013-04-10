@@ -11,11 +11,9 @@
                   <div class="signup_form">
                   <%= form_for(:session, url: sessions_path) do |f| %>
 
-                        <%= f.label :username, "Username:" %>
-                        <%= f.text_field :username %>
+                        <%= f.text_field :username, placeholder: "Username" %>
 
-                        <%= f.label :password, "Password (must be 6 characters long):" %>
-                        <%= f.password_field :password %>
+                        <%= f.password_field :password, placeholder: "Password" %>
                        
                         <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
                       

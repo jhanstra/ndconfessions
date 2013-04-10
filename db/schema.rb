@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406222259) do
+ActiveRecord::Schema.define(:version => 20130409141433) do
 
   create_table "confessions", :force => true do |t|
     t.integer  "number"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(:version => 20130406222259) do
     t.integer  "number_of_trolls"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "total_votes"
+    t.integer  "votes_up"
+    t.integer  "votes_down"
   end
 
   create_table "tags", :force => true do |t|

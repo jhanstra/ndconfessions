@@ -11,9 +11,15 @@
 <aside class="span3 bs-docs-sidebar sidebar_container">
 	<h3 id="sidebar_header">Sort by:</h3>
 	<ul class="nav nav-list bs-docs-sidenav sidebar_list">
-		<li><%= link_to "Most Recent", home_path %></li>
-		<li><%= link_to "Most Popular Today", popular_today_path %></li>
-		<li><a href="#gridSystem">Most Popular This Week</a></li>
+		<li><%= link_to "Most Recent", home_path %></li><hr>
+		<li><%= link_to "Most Popular Today", popular_today_path %></li><hr>
+		<li><a href="#gridSystem">Most Popular This Week</a></li><hr>
 		<li><a href="#fluidGridSystem">Most Popular All-time</a></li>
 	</ul>
 </aside>
+<!-- <div class="side_ad">
+</div> -->
+<div class="sidebar_footer">
+<p><%= link_to "Who the %!$? made NDC?", creators_path, class:"bottom_links" %>  |  <%= link_to "Work with us", submit_path, class:"bottom_links"  %></p>
+</div>
+ 
