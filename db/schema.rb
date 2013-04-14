@@ -11,16 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409141433) do
+ActiveRecord::Schema.define(:version => 20130413232542) do
 
   create_table "confessions", :force => true do |t|
     t.integer  "number"
     t.text     "content"
-    t.integer  "number_of_likes"
-    t.integer  "number_of_dislikes"
-    t.integer  "number_of_trolls"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "total_votes"
     t.integer  "votes_up"
     t.integer  "votes_down"
@@ -43,7 +40,6 @@ ActiveRecord::Schema.define(:version => 20130409141433) do
     t.string   "username"
   end
 
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
   create_table "votes", :force => true do |t|

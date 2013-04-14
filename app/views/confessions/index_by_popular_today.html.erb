@@ -4,7 +4,7 @@
 		<%= render 'layouts/sidebar' %>
 		<div class="content_container">
 
-			<%= will_paginate @confessions %>
+			<% will_paginate @confessions %>
 
 				<% @confessions = Confession.paginate(:page => params[:page], :per_page => 10, order:'content DESC')%>
 				<% @confessions.each do |confession| %>
@@ -35,7 +35,7 @@
 					<hr>
 				<% end %>
 	
-			<%= will_paginate @confessions %>
+			<%= will_paginate %>
 </div>
 	<div>
 </div>
