@@ -1,13 +1,13 @@
 Ndconfessions::Application.routes.draw do
-
-  get "popular_confessions/index"
-
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :confessions do
     member do
        post :vote_up
        post :vote_down
+    end
+    collection do
+      get :popular_today
     end
   end
 
@@ -23,10 +23,6 @@ Ndconfessions::Application.routes.draw do
 
   match '/submit', to: 'confessions#new'
   match '/post', to: 'confessions#create'
-
-
-
-  match '/popular_today', to: 'confessions#index_by_popular_today'
 
   # if current_user.signed_in?
   #   root to: 'confessions#index'
