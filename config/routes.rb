@@ -15,6 +15,8 @@ Ndconfessions::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/home', to: 'confessions#index'
   match '/creators', to: 'static_pages#creators'
+  match '/work_with_us', to: 'static_pages#work_with_us'
+
 
  
   match '/signup', to: 'users#new'
