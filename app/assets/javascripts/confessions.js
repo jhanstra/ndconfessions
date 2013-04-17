@@ -5,11 +5,11 @@ jQuery(function() {
  		
 	})
 
-$(window).scroll(function() {
-   if($(".content_container").scrollTop() + $(window).height() == $(document).height() - 200) {
-       getNewPage();
-   }
-});
+// $(window).scroll(function() {
+//    if($(".content_container").scrollTop() + $(window).height() == $(document).height() - 200) {
+//        getNewPage();
+//    }
+// });
 	// on_scroll = getNewPage()
 });
 

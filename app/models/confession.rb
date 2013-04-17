@@ -1,5 +1,5 @@
 class Confession < ActiveRecord::Base
-  self.per_page = 200
+  self.per_page = 10
   attr_accessible :content, :number_of_likes, :number_of_dislikes, :total_votes
   validates :content, presence: true
 

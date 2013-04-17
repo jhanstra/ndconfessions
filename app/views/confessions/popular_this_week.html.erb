@@ -1,0 +1,39 @@
+<%= render 'layouts/header' %>
+<div class="container">
+	<div class="row">
+		<%= render 'layouts/sidebar' %>
+		<div class="content_container">
+		
+			<% @confessions.each do |confession| %>
+				<!-- <span id="confession_span"> -->
+				<div class="header_container">
+					<h2 class="header2"><%= link_to "##{confession.id}", confession_path(confession), class:"number_link" %></h2>
+				</div>
+				<div class="stats_container">
+					<%= if current_user.voted_for?(confession) 
+						link_to image_tag('upvote2.png'), vote_up_confession_path(confession), :remote => true, :method => :post, class: "icons icon_clicked " 
+						else
+						link_to image_tag('upvote2.png'), vote_up_confession_path(confession), :remote => true, :method => :post, class: "icons" 
+						end %>
+					<p class="votes">
+						<% total_votes = confession.votes_for - confession.votes_against %>
+						<% total_votes >= 0 ? sign = "+" : sign = "" %>
+						<%= sign %><%= total_votes %> 
+					</p>
+					<br><br>
+					<%= if current_user.voted_against?(confession) 
+						link_to image_tag('downvote2.png'), vote_down_confession_path(confession), :remote => true, :method => :post, class: "icons icon_clicked" 
+						else
+						link_to image_tag('downvote2.png'), vote_down_confession_path(confession), :remote => true, :method => :post, class: "icons" 
+						end %>
+					</div>
+					<br><br>
+					<br><br><br>
+				<p class="text"><%= confession.content %></p>
+				<h4>-<%= time_ago_in_words(confession.created_at) %> ago</h4>
+				<br />
+				<hr />
+			<% end %>
+		</div>
+	</div>
+</div>
