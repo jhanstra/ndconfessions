@@ -2,7 +2,7 @@
 
 			<% will_paginate @confessions %>
 
-				<% @confessions = Confession.paginate(:page => params[:page], :per_page => 20, order:'created_at DESC')%>
+				<% @confessions = Confession.paginate(:page => params[:page], :per_page => 30, order:'created_at DESC')%>
 				<% @confessions.each do |confession| %>		
  			<div class="header_container">
 					<h2 class="header2"><%= link_to "##{confession.id}", confession_path(confession), class:"number_link" %></h2>

@@ -8,6 +8,8 @@ Ndconfessions::Application.routes.draw do
     end
     collection do
       get :popular_today
+      get :popular_this_week
+      get :popular_all_time
     end
   end
 

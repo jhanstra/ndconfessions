@@ -1,4 +1,5 @@
 class Confession < ActiveRecord::Base
+  self.per_page = 200
   attr_accessible :content, :number_of_likes, :number_of_dislikes, :total_votes
   validates :content, presence: true
 
@@ -6,7 +7,7 @@ class Confession < ActiveRecord::Base
 
   scope :popular, lambda {|start_date=Date.today, end_date=Date.today.end_of_day|
     plusminus_tally
-      .where('votes.created_at > :start_date AND votes.created_at <= :end_date',
+      .where('confessions.created_at > :start_date AND confessions.created_at <= :end_date',
              {start_date: start_date, end_date: end_date})
   }
 
@@ -14,7 +15,7 @@ class Confession < ActiveRecord::Base
     popular(7.days.ago)
   }
 
-  scope :popular_this_month, lambda {
-    popular(30.days.ago)
+  scope :popular_all_time, lambda {
+    popular(3000.days.ago)
   }
 end

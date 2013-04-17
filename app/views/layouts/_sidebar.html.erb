@@ -13,13 +13,14 @@
 	<ul class="nav nav-list bs-docs-sidenav sidebar_list">
 		<li><%= link_to "Most Recent", home_path %></li><hr>
 		<li><%= link_to "Most Popular Today", popular_today_confessions_path %></li><hr>
-		<li><a href="#gridSystem">Most Popular This Week</a></li><hr>
-		<li><a href="#fluidGridSystem">Most Popular All-time</a></li>
+		<li><%= link_to "Most Popular This Week", popular_this_week_confessions_path %></li><hr>
+		<li><%= link_to "Most Popular All-time", popular_all_time_confessions_path %></li><hr>
+
 	</ul>
 </aside>
 <!-- <div class="side_ad">
 </div> -->
 <div class="sidebar_footer">
-<p><%= link_to "Who the %!$? made NDC?", creators_path, class:"bottom_links" %>  |  <%= link_to "Work with us", work_with_us_path, class:"bottom_links"  %></p>
+<p><%= link_to "Who the %!$? made NDC?", creators_path, class:"bottom_links" %>  |  <%= link_to "Work with us", work_with_us_path, class:"bottom_links"  %><br><span>Copyright &#0169 2013. All Rights Reserved.</span></p>
 </div>
 

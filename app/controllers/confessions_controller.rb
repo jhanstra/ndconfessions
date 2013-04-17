@@ -25,12 +25,12 @@ class ConfessionsController < ApplicationController
     @confessions = Confession.popular.paginate(:page => params[:page])
   end
 
-  def index_by_popular_week
-    @confessions = Confession.paginate(:page => params[:page])
+  def popular_this_week
+    @confessions = Confession.popular_this_week.paginate(:page => params[:page])
   end
 
-  def index_by_popular_all_time
-    @confessions = Confession.paginate(:page => params[:page])
+  def popular_all_time
+    @confessions = Confession.popular_all_time.paginate(:page => params[:page])
   end
 
   def vote_up

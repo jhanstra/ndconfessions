@@ -4,9 +4,6 @@
 		<%= render 'layouts/sidebar' %>
 		<div class="content_container">
 		
-		<% will_paginate @confessions %>
-		<% @confessions = Confession.popular.paginate(:page => params[:page], :per_page => 20)%>
-		
 			<% @confessions.each do |confession| %>
 				<!-- <span id="confession_span"> -->
 				<div class="header_container">
@@ -37,7 +34,6 @@
 				<br />
 				<hr />
 			<% end %>
-			<%= will_paginate(@confessions) %>
 		</div>
 	</div>
 </div>
