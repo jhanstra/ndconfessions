@@ -12,7 +12,7 @@ class Confession < ActiveRecord::Base
   }
 
   scope :popular_recently, lambda {
-    popular(2.hours.ago)
+    popular(2.hour.ago)
   }
 
   scope :popular_this_week, lambda {
