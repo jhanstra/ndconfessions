@@ -21,6 +21,10 @@ class ConfessionsController < ApplicationController
     @confessions = Confession.paginate(:page => params[:page])
   end
 
+  def popular_recently
+    @confessions = Confession.popular_recently.paginate(:page => params[:page])
+  end
+
   def popular_today
     @confessions = Confession.popular.paginate(:page => params[:page])
   end

@@ -7,6 +7,7 @@ Ndconfessions::Application.routes.draw do
        post :vote_down
     end
     collection do
+      get :popular_recently
       get :popular_today
       get :popular_this_week
       get :popular_all_time
@@ -31,7 +32,7 @@ Ndconfessions::Application.routes.draw do
   # if current_user.signed_in?
   #   root to: 'confessions#index'
   # else
-    root to: 'users#new'
+    root to: 'confessions#popular_today'
   
 
 

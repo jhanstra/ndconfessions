@@ -11,6 +11,10 @@ class Confession < ActiveRecord::Base
              {start_date: start_date, end_date: end_date})
   }
 
+  scope :popular_recently, lambda {
+    popular(2.hours.ago)
+  }
+
   scope :popular_this_week, lambda {
     popular(7.days.ago)
   }
