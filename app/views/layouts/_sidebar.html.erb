@@ -11,16 +11,15 @@
 <aside class="span3 bs-docs-sidebar sidebar_container">
 	<h3 id="sidebar_header">Sort by:</h3>
 	<ul class="nav nav-list bs-docs-sidenav sidebar_list">
-		<li><%= link_to "Most Recent", home_path %></li><hr>
 		<li><%= link_to "Most Popular Today", popular_today_confessions_path %></li><hr>
 		<li><%= link_to "Most Popular This Week", popular_this_week_confessions_path %></li><hr>
 		<li><%= link_to "Most Popular All-time", popular_all_time_confessions_path %></li><hr>
-
+		<li><%= link_to "Most Recent", most_recent_path %></li><hr>
 	</ul>
 </aside>
 <!-- <div class="side_ad">
 </div> -->
 <div class="sidebar_footer">
-<p><%= link_to "Who the %!$? made NDC?", creators_path, class:"bottom_links" %>  |  <%= link_to "Work with us", work_with_us_path, class:"bottom_links"  %><br><span>Copyright &#0169 2013. All Rights Reserved.</span></p>
+<p><%= link_to "Who the %!$? made NDC?", creators_path, class:"bottom_links" %>  |  <%= link_to "Work with us", work_with_us_path, class:"bottom_links"  %><br><span class="copyright">Copyright &#0169 2013. All Rights Reserved.</span></p>
 </div>
 
