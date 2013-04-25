@@ -13,4 +13,7 @@ class StaticPagesController < ApplicationController
 
   def work_with_us
   end
+
+  def help
+  end
 end
