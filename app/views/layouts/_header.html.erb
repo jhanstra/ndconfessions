@@ -16,11 +16,10 @@
           	<% else %>
             <%= link_to "Sign in", signin_path, class: "top_links" %>
           <% end %>
-      
-         
+      <%= link_to "Help", help_path, class: "top_links" %>     
 		  <%= link_to "Home", home_path, class: "top_links" %>
-<!-- 		  <%= link_to "Sign out", signout_path, method: "delete", class: "top_links" %>
- -->          
+
+          
     <%= link_to "+ Submit a Confession", submit_path, class: "btn btn-primary btn-large submit_button" %>
 
 		<h1><%= link_to "ND Confessions", home_path, class: "logo" %></h1>

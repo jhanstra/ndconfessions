@@ -17,6 +17,12 @@ class ConfessionsController < ApplicationController
     @confession = Confession.find(params[:id])
   end
 
+  def destroy
+    Confession.find(params[:id]).destroy
+    flash[:success] = "User destroyed."
+    redirect_to confessions_url
+  end
+
   def index
     @confessions = Confession.paginate(:page => params[:page])
   end
