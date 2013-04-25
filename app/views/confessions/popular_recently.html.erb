@@ -51,7 +51,9 @@
 						<br><br><br>
 						<p class="text"><%= confession.content %></p>
 						<h4>-<%= time_ago_in_words(confession.created_at) %> ago</h4>
-					
+						<% if current_user.admin? %>
+    					<%= link_to "delete", confession, method: :delete, data: { confirm: "Are you sure?" }, class:"delete_button" %>
+                        <% end %>
 						<br />
 						<hr />
 					<% end %>
